@@ -1,45 +1,134 @@
-# Agentic RAG + LangGraph
+# Agentic RAG System with LangGraph and Local LLMs
 
-An Agentic Retrieval-Augmented Generation (RAG) system built using:
+## Overview
+
+This project implements an Agentic Retrieval-Augmented Generation (RAG) system using LangGraph, ChromaDB, Sentence Transformers, Ollama, and Llama 3.
+
+The system retrieves relevant information from documents, generates context-aware responses using a local Large Language Model (LLM), and evaluates the quality of generated answers through a Reflection Agent.
+
+---
+
+## Architecture
+
+User Question
+↓
+Planner Agent
+↓
+Retriever Agent
+↓
+ChromaDB Vector Store
+↓
+Reasoner Agent (Llama 3 via Ollama)
+↓
+Reflection Agent
+↓
+Final Answer
+
+---
+
+## Features
+
+* PDF Document Loading
+* Intelligent Text Chunking
+* Embedding Generation
+* ChromaDB Vector Storage
+* Semantic Similarity Search
+* Local LLM Inference using Ollama
+* LangGraph Workflow Orchestration
+* Planner Agent
+* Retriever Agent
+* Reasoner Agent
+* Reflection Agent
+* End-to-End Agentic RAG Pipeline
+
+---
+
+## Tech Stack
 
 * Python
 * LangChain
 * LangGraph
 * ChromaDB
 * Sentence Transformers
+* Ollama
+* Llama 3
+* Hugging Face
 
-## Features
-
-* PDF Document Loading
-* Text Chunking
-* Embedding Generation
-* Vector Storage with ChromaDB
-* Similarity Search
-* Basic RAG Pipeline
-* LangGraph Agent Workflow
-
-  * Planner Agent
-  * Retriever Agent
-  * Reasoner Agent
+---
 
 ## Project Structure
 
 app/
+
 ├── ingestion/
+
+│ ├── load_pdf.py
+
+│ └── chunk_pdf.py
+
 ├── embeddings/
+
+│ └── create_embeddings.py
+
 ├── vector_store/
+
+│ └── store_vectors.py
+
 ├── retrieval/
+
+│ └── search.py
+
 ├── rag/
+
+│ └── rag_chat.py
+
 └── agentic_rag/
 
-## Future Enhancements
+├── basic_graph.py
 
-* Reflection Agent
-* Local LLM (Ollama)
-* Tool Calling
-* Multi-Agent Systems
-* GraphRAG with Neo4j
+├── retrieval_graph.py
+
+├── planner_graph.py
+
+├── reflection_graph.py
+
+├── full_rag.py
+
+└── agentic_rag.py
+
+---
+
+## Example
+
+Question:
+
+What programming languages does Vishva know?
+
+Answer:
+
+* Python
+* Java
+* C++
+* JavaScript
+* SQL
+
+---
+
+## Future Improvements
+
+* GraphRAG using Neo4j
+* Multi-Agent Collaboration
+* Tool Calling Agents
+* Web Search Integration
+* Streamlit Deployment
+* FastAPI Backend
+
+---
 
 ## Author
 
 Vishva M
+
+B.Sc Data Science
+
+Saveetha University
