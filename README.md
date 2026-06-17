@@ -1,3 +1,4 @@
+<img width="1133" height="527" alt="demo png" src="https://github.com/user-attachments/assets/ed06118a-83f0-4e2b-9991-9a6ca0ee8e37" />
 # Agentic RAG System with LangGraph and Local LLMs
 
 ## Overview
